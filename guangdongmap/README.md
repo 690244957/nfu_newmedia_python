@@ -14,14 +14,14 @@ guangdongmap
 用户得到输出结果为：
 ## 从输入到输出，本组作品使用了：
 ### 模块
-* matplotlib
-* request
+* 
+*
 * folium
 * lxml
 ### 数据
 * [简中CLDR localenames](http://www.cnblogs.com/zhangqs008/archive/2011/05/09/2341138.html)
 ### API
-* [github](http://lbs.amap.com/api/uri-api/summary/)
+* 
 
 ## 作者成员：
 见[_team_.tsv](_team_/_team_.tsv)
