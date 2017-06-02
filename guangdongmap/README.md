@@ -17,6 +17,7 @@ guangdongmap
 * matplotlib
 * request
 * folium
+* lxml
 ### 数据
 * [简中CLDR localenames](http://www.cnblogs.com/zhangqs008/archive/2011/05/09/2341138.html)
 ### API
