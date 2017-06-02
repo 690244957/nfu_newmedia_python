@@ -14,10 +14,10 @@ guangdongmap
 用户得到输出结果为：
 ## 从输入到输出，本组作品使用了：
 ### 模块
-* 
-*
 * folium
 * lxml
+* 
+* 
 ### 数据
 * [简中CLDR localenames](http://www.cnblogs.com/zhangqs008/archive/2011/05/09/2341138.html)
 ### API
@@ -27,4 +27,4 @@ guangdongmap
 见[_team_.tsv](_team_/_team_.tsv)
 
 
-		成员列表，统计用，一人一行，输入Github 帐户名即可（此行完成後应删）
+		
