@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*- 
-with open ('data/new.txt','r',encoding='utf8')as data:
+with open ('data/guangdong.txt','r',encoding='utf8')as data:
     gd=data.readlines()
 
 
