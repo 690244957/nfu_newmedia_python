@@ -4,13 +4,13 @@
 
 <h2>{{ the_title }}</h2>
 
-<form method='POST' action='/pick_a_city'>
+<form method='POST' action='/pick_city'>
 <table>
-<th colspan="2">请选取城市：</th>
-<tr><td>城市: </td><td><input type="text" name="city" /></td></tr>
+<th colspan="2">使用此窗体提交搜索请求：</th>
+<tr><td>城市：</td><td><input name='city' type='TEXT' width='60'></td></tr>
 </table>
 <p>准备就绪后, 单击此按钮：</p>
-<p><input value='搞吧！' type='SUBMIT'></p>
+<p><input value='搜寻！' type='SUBMIT'></p>
 </form>
 
 {% endblock %}
