@@ -20,7 +20,7 @@ guangdongmap
 ### 数据
 * [简中CLDR localenames](http://www.cnblogs.com/zhangqs008/archive/2011/05/09/2341138.html)
 ### API
-* 
+* http://lbs.amap.com/api/webservice/guide/api/district
 
 ## 作者成员：
 见[_team_.tsv](_team_/_team_.tsv)
