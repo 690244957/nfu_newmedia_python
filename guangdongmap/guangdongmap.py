@@ -13,7 +13,7 @@ def do_search() -> 'html':
     title = '以下是您的结果：'
     #results = search2(city)
     return render_template('results.html',
-                           the_title=title,
+                           the_title=title
                            the_city=city,)
                            #the_results=results,)
 
