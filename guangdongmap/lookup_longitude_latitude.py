@@ -3,7 +3,7 @@ with open ('data/guangdong.txt','r',encoding='utf8')as data:
     gd=data.readlines()
 
 
-xxx=gd[0].strip().split(' '
+xxx=gd[0].strip().split(' ')
 #print(xxx)
 
 yyy ={x.split(':')[0]:x.split(':')[1] for x in xxx}
