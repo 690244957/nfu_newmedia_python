@@ -2,7 +2,7 @@
 from flask import Flask, render_template, request, escape
 #from search5 import search2
 
-app = Flask(__name__)
+app = Flask(__name__
 
 
 
