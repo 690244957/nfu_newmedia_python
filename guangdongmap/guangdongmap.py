@@ -23,7 +23,7 @@ def do_search() -> 'html':
 def entry_page() -> 'html':
     """Display this webapp's HTML form."""
     return render_template('entry.html',
-                           the_title='广东省城市地图！')
+                           the_title='广东省城市地图！'
 
 
 
