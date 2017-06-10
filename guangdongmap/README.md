@@ -15,7 +15,7 @@ guangdongmap
 ## 从输入到输出，本组作品使用了：
 ### 模块
 * request
-* 
+* folium
 
 ### 数据
 * [简中CLDR localenames](http://www.cnblogs.com/zhangqs008/archive/2011/05/09/2341138.html)
