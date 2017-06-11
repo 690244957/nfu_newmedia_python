@@ -14,8 +14,7 @@ guangdongmap
 用户得到输出结果为：
 ## 从输入到输出，本组作品使用了：
 ### 模块
-* request
-* folium
+* requests
 
 
 ### 数据
