@@ -2,11 +2,12 @@
 
 {% block body %}
 
-<h2>{{ the_title }}</h2>
+<h1 align="center">{{ the_title }}</h1>
 
 <form method='POST' action='/pick_city'>
-<table>
-<th colspan="2">使用此窗体提交搜索请求：</th>
+<table align="center">
+<th colspan="2">请输入城市：</th>
+
 <td>
 <select name="city">
   {% for item in the_user_city %}
@@ -15,10 +16,15 @@
 
   {% endfor %}
 </select>
-</td>
-</table>
-<p>准备就绪后, 单击此按钮：</p>
-<p><input value='搜寻！' type='SUBMIT'></p>
+
+	<tr>
+
+		 <td>请您确认搜寻</td>
+	</tr>
+
+	<tr>
+		 <td><input value='搜寻！' type='SUBMIT'></td>
+	</tr>
 </form>
 
 {% endblock %}
