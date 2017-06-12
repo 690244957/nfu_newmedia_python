@@ -31,6 +31,7 @@ for line in gd:
 
 
 #定义经纬度函数
+
 def location_x(cities):
     x=line_all_dict[cities]['经度']  
     return x
@@ -60,5 +61,4 @@ def get_img(cities):
     with open (path_img, "wb") as f:
         f.write(r.content)
     return path_img
-
 

@@ -41,6 +41,7 @@ def entry_page() -> 'html':
 def get_image(filename):        #filename 
     #傳送mimetype="image/"
     #假定都是image/png格式
+
     import os.path
     
     return send_file(os.path.join("maps",filename), mimetype='image/png')

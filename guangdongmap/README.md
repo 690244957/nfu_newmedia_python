@@ -14,7 +14,9 @@ guangdongmap
 用户得到输出结果为：
 ## 从输入到输出，本组作品使用了：
 ### 模块
+
 * requests
+
 
 
 ### 数据
@@ -26,5 +28,3 @@ guangdongmap
 见[_team_.tsv](_team_/_team_.tsv)
 ###数据参考
 https://github.com/zza2205260/Python-sphinx
-
-		
