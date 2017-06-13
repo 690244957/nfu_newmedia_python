@@ -2,13 +2,14 @@
 
 {% block body %}
 
-<h2>{{ the_title }}</h2>
+<h2 align="center">{{ the_title }}</h2>
 
-<p>您提交了以下数据：</p>
-<table>
+<p align="center">您提交了以下数据：</p>
+<table align="center">
 <tr><td>城市：</td><td>{{ the_city }}</td></tr>
 </table>
-<p>您所请求的地图：</p>
-<img src='{{ the_results }}'  alt="{{ the_city }}的地图" />
-
+<div  class=“zhiding” align="center">
+<p align="center">您所请求的地图：</p>
+<img src='{{ the_results }}'  alt="{{ the_city }}的地图" >
+</div>
 {% endblock %}

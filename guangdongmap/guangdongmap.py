@@ -4,7 +4,7 @@ from lookup_longitude_latitude import get_img
 
 app = Flask(__name__)
 
-with open ('data/guangdong.txt','r',encoding='utf8')as data:
+with open ('data/citydata.txt','r',encoding='utf8')as data:
     gd=data.readlines()
 data_all=[]
 for item in gd:
@@ -31,7 +31,7 @@ def do_search() -> 'html':
 def entry_page() -> 'html':
     """Display this webapp's HTML form."""
     return render_template('entry.html',
-                           the_title='广东省城市地图！',
+                           the_title='城市地图导航',
 						   the_user_city=city_list)
 
 

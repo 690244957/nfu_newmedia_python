@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*- 
 import requests
 
-with open ('data/guangdong.txt','r',encoding='utf8')as data:
+with open ('data/citydata.txt','r',encoding='utf8')as data:
     gd=data.readlines()
 
 
