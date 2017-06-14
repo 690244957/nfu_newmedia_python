@@ -2,19 +2,19 @@
 from flask import Flask, render_template, request, escape, url_for, send_file
 from lookup_longitude_latitude import get_img
 
-app = Flask(__name__
+app = Flask(__name__)
 
 with open ('data/citydata.txt','r',encoding='utf8')as data:
     gd=data.readlines()
 data_all=[]
 for item in gd:
-    item_data = item.strip().split(' '
+    item_data = item.strip().split(' ')
     item_dict = {x.split(':')[0]:x.split(':')[1] for x in item_data}
     data_all.append(item_dict)
 
-city_list=[x['城市'] for x in data_all
+city_list=[x['城市'] for x in data_all]
 
-@app.route('/pick_city', methods=['POST'
+@app.route('/pick_city', methods=['POST'])
 def do_search() -> 'html':
     """Extract the posted data; perform the search; return results."""
     city=request.form['city']
