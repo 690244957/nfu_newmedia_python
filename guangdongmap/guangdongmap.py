@@ -4,15 +4,11 @@ from lookup_longitude_latitude import get_img
 
 app = Flask(__name__)
 
-with open ('data/citydata.txt','r',encoding='utf8')as data:
-    gd=data.readlines()
-data_all=[]
-for item in gd:
-    item_data = item.strip().split(' ')
-    item_dict = {x.split(':')[0]:x.split(':')[1] for x in item_data}
-    data_all.append(item_dict)
-
-city_list=[x['城市'] for x in data_all]
+import json
+with open('data/guangdongmap.json','rb')as fp:
+    python=json.load(fp)
+cities=python.keys()
+city_list=list(cities)
 
 @app.route('/pick_city', methods=['POST'])
 def do_search() -> 'html':
@@ -41,7 +37,6 @@ def entry_page() -> 'html':
 def get_image(filename):        #filename 
     #傳送mimetype="image/"
     #假定都是image/png格式
-
     import os.path
     
     return send_file(os.path.join("maps",filename), mimetype='image/png')
