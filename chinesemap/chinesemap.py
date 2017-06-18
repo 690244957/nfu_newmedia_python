@@ -5,7 +5,7 @@ from lookup_longitude_latitude import get_img
 app = Flask(__name__)
 
 import json
-with open('data/guangdongmap.json','rb')as fp:
+with open('data/chinesemap.json','rb')as fp:
     python=json.load(fp)
 cities=python.keys()
 city_list=list(cities)

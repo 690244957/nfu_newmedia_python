@@ -9,13 +9,16 @@
 <th colspan="2">请选择您想要搜寻的城市：</th>
 
 <td>
-<select name="city">
+<input list="city" />
+<datalist id="city">
+  <select name="city">
   {% for item in the_user_city %}
   
     <option value="{{item}}">{{item}}</option>
-
+    <!-- more -->
+   </select>
   {% endfor %}
-</select>
+</datalist>
 
 	<tr>
 
