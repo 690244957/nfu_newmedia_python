@@ -4,11 +4,11 @@
 
 <h2 align="center">{{ the_title }}</h2>
 
-<p align="center">用户您提交了以下数据：</p>
+<p align="center">您提交了以下数据：</p>
 <table align="center">
 <tr><td>城市：</td><td>{{ the_city }}</td></tr>
 </table>
-<p align="center">用户您所请求的地图：</p>
+<p align="center">您所请求的地图：</p>
 <div align="center">
 {% for k,v in the_results.items() %}
 <div style='padding:3rem'>zoom {{ k }}<img src='{{ v }}' /></div>
