@@ -13,14 +13,17 @@ city_list=list(cities)
 @app.route('/pick_city', methods=['POST'])
 def do_search() -> 'html':
     """Extract the posted data; perform the search; return results."""
-    city=request.form['the_user_city']
+    user_city = request.form['the_user_city']
     title = '以下是您的结果：'
-    results = get_img(city)
+    results = []
+    zoom_list=list(range(7,14,3))
+    for y in zoom_list:
+        results.append( get_img(user_city, z=y) )
+    results = {zoom_list[i]:x for i,x in enumerate(results)}
     return render_template('results.html',
                            the_title=title,
-                           the_city=city,
+                           the_city=user_city,
                            the_results=results)
-
 
 @app.route('/')
 @app.route('/entry')
