@@ -5,7 +5,7 @@ from lookup_longitude_latitude import get_img
 app = Flask(__name__)
 
 import json
-with open('data/chinesemap.json','rb')as fp:
+with open('data/PRCmap.json','rb')as fp:
     python=json.load(fp)
 cities=python.keys()
 city_list=list(cities)
@@ -13,7 +13,7 @@ city_list=list(cities)
 @app.route('/pick_city', methods=['POST'])
 def do_search() -> 'html':
     """Extract the posted data; perform the search; return results."""
-    city=request.form['city']
+    city=request.form['the_user_city']
     title = '以下是您的结果：'
     results = get_img(city)
     return render_template('results.html',
@@ -26,12 +26,13 @@ def do_search() -> 'html':
 @app.route('/entry')
 def entry_page() -> 'html':
     """Display this webapp's HTML form."""
+    print(city_list)
     return render_template('entry.html',
                            the_title='城市地图导航',
-						   the_user_city=city_list)
+                           the_available_city=city_list)
 
 
-						   
+
 #这里我们接受一个 filename 檔名变量，http://127.0.0.1:5000/img/檔名
 @app.route('/maps/<filename>')  #filename
 def get_image(filename):        #filename 
