@@ -19,12 +19,12 @@ def do_search() -> 'html':  #定义一个函数
     results = []  #建立一个空列表
     zoom_list=list(range(7,14,3))  #
     for y in zoom_list: #建立一个for循环
-        results.append( get_img(user_city, z=y) )  #在文件里面增加一个数据项
+        results.append( get_img(user_city, z=y) )  #将从网页得到的信息放入get_img(),然后得到图片
     results = {zoom_list[i]:x for i,x in enumerate(results)}  
     return render_template('results.html', 
                            the_title=title,
                            the_city=user_city,
-                           the_results=results)   #把得到的结果回传到render_template
+                           the_results=results)   #将图片输出到网页
 
 @app.route('/')
 @app.route('/entry')
