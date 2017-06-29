@@ -52,6 +52,6 @@ def get_img(a_city, z='10'):   #定义get_img函数，并且可以输入a_city, 
     except:
         data = r.content #如果打不开就输出api的原始数据
     with open (path_img, "wb") as f:
-        f.write(r.content)  #打开图片并读取图片
-    return path_img   #回到图片
+        f.write(r.content)  #将地图的代码输出成图片文件
+    return path_img   #返回图片
 
