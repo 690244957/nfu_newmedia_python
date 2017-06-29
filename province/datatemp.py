@@ -5,6 +5,7 @@ def get_data():
     with open ('data/province_code_name.json') as fp:
         data = json.load(fp)
         
+    #建立一个省份列表，抽取数据
     list_province = [v for k,v in data.items()]
     
 
