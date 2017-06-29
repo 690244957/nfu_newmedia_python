@@ -4,30 +4,31 @@ from lookup_longitude_latitude import get_img
 
 app = Flask(__name__)
 
-import json
-with open('data/PRCmap.json','rb')as fp:
-    python=json.load(fp)
-cities=python.keys()
-city_list=list(cities)
+import json  #调用json模块
+with open('data/PRCmap.json','rb')as fp:  #打开data/PRCmap.json文件
+    python=json.load(fp)  #读取json文件
+cities=python.keys()   #变量cities=python里的键
+city_list=list(cities) #建一个列表，内容是python里的键
+
 
 @app.route('/pick_city', methods=['POST'])
-def do_search() -> 'html':
+def do_search() -> 'html':  #定义一个函数
     """Extract the posted data; perform the search; return results."""
     user_city = request.form['the_user_city']
     title = '以下是您的结果：'
-    results = []
-    zoom_list=list(range(7,14,3))
-    for y in zoom_list:
-        results.append( get_img(user_city, z=y) )
-    results = {zoom_list[i]:x for i,x in enumerate(results)}
-    return render_template('results.html',
+    results = []  #建立一个空列表
+    zoom_list=list(range(7,14,3))  #
+    for y in zoom_list: #建立一个for循环
+        results.append( get_img(user_city, z=y) )  #在文件里面增加一个数据项
+    results = {zoom_list[i]:x for i,x in enumerate(results)}  
+    return render_template('results.html', 
                            the_title=title,
                            the_city=user_city,
-                           the_results=results)
+                           the_results=results)   #把得到的结果回传到render_template
 
 @app.route('/')
 @app.route('/entry')
-def entry_page() -> 'html':
+def entry_page() -> 'html': 
     """Display this webapp's HTML form."""
     print(city_list)
     return render_template('entry.html',
