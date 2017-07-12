@@ -3,7 +3,7 @@ chinesemap
 英文项目名称chinesemap
 		
 # 简介 
-选取城市得到相对应的城市地图，输入方面用户选取城市名称，输出方面则是输出3张不同比例的城市地图，可查394个国内城市，数据来源高德地图API数据抓取的json档。
+选取城市得到相对应的城市地图，输入方面用户选取城市名称，输出方面则是输出3张不同比例的城市地图，可查394个国内城市，数据来源[高德地图API](http://restapi.amap.com/v3/config/district?key=ee83ffb0500bcbbe5929a0d58d012e0e&keywords=中国&subdistrict=2&showbiz=fa)抓取的json档。
 		
 ## 输入：
 
@@ -15,8 +15,8 @@ chinesemap
 
 ## 从输入到输出，本组作品使用了：
 ### 模块
-* requests(http://www.python-requests.org/en/master/)
-* json(http://www.runoob.com/json/json-tutorial.html)
+* [requests](http://docs.python-requests.org/zh_CN/latest/user/quickstart.html)
+* [json](https://docs.python.org/2/library/json.html)
 
 ### 数据
 * [高德地图行政区域查询](http://restapi.amap.com/v3/config/district?key=ee83ffb0500bcbbe5929a0d58d012e0e&keywords=中国&subdistrict=2&showbiz=fa)
