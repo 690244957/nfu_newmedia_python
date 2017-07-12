@@ -11,7 +11,7 @@ chinesemap
 
 ## 输出：
 
-用户得到输出结果为：3张不同比例的城市地图，见[tempaltes/results.html](tempaltes/results.html)
+用户得到输出结果为：3张不同比例的城市地图，见[templates/results.html](templates/results.html)
 
 ## 从输入到输出，本组作品使用了：
 ### 模块
@@ -22,8 +22,8 @@ chinesemap
 * [高德地图行政区域查询](http://restapi.amap.com/v3/config/district?key=ee83ffb0500bcbbe5929a0d58d012e0e&keywords=中国&subdistrict=2&showbiz=fa)
 
 ### API
-* [高德地图行政区域查询API](http://restapi.amap.com/v3/config/district)
-* [高德地图静态地图API](http://restapi.amap.com/v3/staticmap)
+* [高德地图行政区域查询API](http://restapi.amap.com/v3/config/district?parameters={parameters})
+* [高德地图静态地图API](http://restapi.amap.com/v3/staticmap?parameters={parameters})
 
 
 ## Web App动作描述
